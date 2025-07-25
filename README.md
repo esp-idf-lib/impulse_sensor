@@ -11,7 +11,7 @@ Driver for impulse output sensors.
 ## Installation
 
 ```sh
-idf.py add-dependency "esp-idf-lib/impulse_sensor^1.0.0
+idf.py add-dependency esp-idf-lib/impulse_sensor^1.0.0
 ```
 
 ## Support
