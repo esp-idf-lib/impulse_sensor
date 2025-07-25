@@ -27,4 +27,4 @@ issues: https://github.com/esp-idf-lib/impulse_sensor/issues
 discussion: https://github.com/esp-idf-lib/core/discussions
 files:
   exclude:
-    - docs
+    - docs/**/*
