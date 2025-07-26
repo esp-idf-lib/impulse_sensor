@@ -1,7 +1,7 @@
 ---
 name: impulse_sensor
 description: Driver for impulse output sensors
-version: 1.0.2
+version: 1.0.3
 groups:
   - misc
 code_owners:
