@@ -167,7 +167,8 @@ static void timer_event_callback(void *arg)
 
 static esp_err_t timer_setup(imp_sensor_priv_t *priv, const uint32_t period)
 {
-    esp_timer_create_args_t timer_args = {
+    esp_timer_create_args_t timer_args =
+    {
         .name = "imp-sensor",
         .dispatch_method = ESP_TIMER_TASK,
         .callback = timer_event_callback,

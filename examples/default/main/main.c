@@ -24,7 +24,8 @@ static const char *TAG = "APP";
 
 static imp_sensor_t anemometer;
 
-static imp_sensor_config_t config = {
+static imp_sensor_config_t config =
+{
     .input_pin = CONFIG_EXAMPLE_DATA_GPIO,
     .scale_factor = (1.75 / 20) //!< 1.75 m/s = 20 pps,
 };
