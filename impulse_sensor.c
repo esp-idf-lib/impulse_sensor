@@ -42,16 +42,8 @@
 #include <esp_timer.h>
 #include <esp_idf_lib_helpers.h>
 
-#if defined(HELPER_TARGET_IS_ESP32) \
-    && !defined(CONFIG_IDF_TARGET_ESP32C2) \
-    && !defined(CONFIG_IDF_TARGET_ESP32C3) \
-    && !defined(CONFIG_IDF_TARGET_ESP32C61)
-
-
-#define ESP_PCNT_SUPPORTED (1)
+#if defined(HAS_PCNT)
 #include <driver/pulse_cnt.h>
-#else
-#define ESP_PCNT_SUPPORTED (0)
 #endif
 
 #if HELPER_TARGET_IS_ESP32
@@ -82,7 +74,7 @@ typedef struct
     int pps;                  //!< measured pulses count per second
     esp_timer_handle_t timer; //!< periodic timer to reset pps count
 
-#if ESP_PCNT_SUPPORTED
+#if HAS_PCNT
     pcnt_unit_handle_t pcnt_unit;  //!< hardware pulse counter
     pcnt_channel_handle_t pcnt_ch; //!< hardware pulse counter channel
 #else
@@ -90,7 +82,7 @@ typedef struct
 #endif
 } imp_sensor_priv_t;
 
-#if ESP_PCNT_SUPPORTED
+#if HAS_PCNT
 
 static esp_err_t pulse_counter_init(imp_sensor_priv_t *priv)
 {
