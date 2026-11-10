@@ -11,8 +11,4 @@ resistors.
 
 | Name | Description | Defaults |
 |------|-------------|----------|
-| `CONFIG_EXAMPLE_DATA_GPIO` | GPIO number for `DATA` | "5" for `esp8266`, "6" for `esp32c3`, "19" for `esp32`, `esp32s2`, and `esp32s3` |
-
-## Notes
-
-`CONFIG_NEWLIB_LIBRARY_LEVEL_NORMAL` must be `y` on `esp8266`.
+| `CONFIG_EXAMPLE_DATA_GPIO` | GPIO number for `DATA` | "6" for `esp32c3`, "19" for `esp32`, `esp32s2`, and `esp32s3` |
